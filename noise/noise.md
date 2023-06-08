@@ -18,8 +18,12 @@ sequenceDiagram
     Server-)Client: skem
 ```
 
-Here's the comparison between XX and pqXX patterns:
+Here's the comparison between XX and pqXX patterns, from the PQNoise paper:
 
 
 ![XX vs pqXX](XX_vs_pqXX.png)
+
+Here's the pqXX algorithm from the PQNoise paper:
+
+![pqXX algorithm](pqXX_algorithm.png)
 
