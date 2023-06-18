@@ -9,7 +9,7 @@ import Diagrams.Backend.SVG.CmdLine
 circleDiagram :: String -> Int -> Diagram B
 circleDiagram s n = (text s # fontSizeL 0.1 # fc white
                      <> text (show n) # fontSizeL 0.1 # fc white # translateY (-0.15))
-                 <> circle 0.2 # fc blue # named (s ++ show n)
+                 <> circle 0.2 # fc lightseagreen # named (s ++ show n)
 
 -- Create a horizontal row of 5 circles with space in between
 row :: Int -> Diagram B
