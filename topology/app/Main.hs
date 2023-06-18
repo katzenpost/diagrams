@@ -11,15 +11,15 @@ circleDiagram s n = (text s # fontSizeL 0.1 # fc white
                      <> text (show n) # fontSizeL 0.1 # fc white # translateY (-0.15))
                  <> circle 0.2 # fc lightseagreen # named (s ++ show n)
 
--- Create a horizontal row of 5 circles with space in between
-row :: Int -> Diagram B
-row n 
-  | n == 0 || n == 4 = hsep 1 $ map (\i -> circleDiagram "provider" i) [n*5+1..n*5+5]
-  | otherwise        = hsep 1 $ map (\i -> circleDiagram "mix" i) [n*5+1..n*5+5]
+-- Create a vertical column of circles with space in between
+column :: Int -> Diagram B
+column n 
+  | n == 0 || n == 4 = vsep 1 $ map (\i -> circleDiagram "provider" i) [n*5+1..n*5+5]
+  | otherwise        = vsep 1 $ map (\i -> circleDiagram "mix" i) [n*5+1..n*5+5]
 
--- Create a grid of 5 rows of 5 circles with space in between
+-- Create a grid of 5 columns of 5 circles with space in between
 grid :: Diagram B
-grid = vsep 1 $ map row [0..4]
+grid = hsep 1 $ map column [0..4]
 
 -- Create a full mesh of arrows between two layers
 connectLayers :: Int -> Int -> Diagram B -> Diagram B
