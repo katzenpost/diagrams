@@ -4,7 +4,7 @@ import Diagrams.Backend.SVG.CmdLine
 
 node :: Int -> Diagram B
 node n = text ("dirauth" ++ show n) # fontSizeL 0.08 # fc white
-      <> circle 0.2 # fc green # named n
+      <> circle 0.2 # fc mediumaquamarine # named n
 
 arrowOpts = with & gaps       .~ small
                   & headLength .~ local 0.15
